@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_11/widgets/screen_background.dart';
 
@@ -30,7 +31,7 @@ class _signInScreenState extends State<signInScreen> {
               TextFormField(decoration: InputDecoration(hintText: 'Password')),
               const SizedBox(height: 8),
               FilledButton(
-                onPressed: () {},
+                onPressed: _onTapSignInButton,
                 child: Icon(Icons.arrow_circle_right_outlined),
               ),
               const SizedBox(height: 24),
@@ -38,7 +39,7 @@ class _signInScreenState extends State<signInScreen> {
                 child: Column(
                   children: [
                     TextButton(
-                      onPressed: () {},
+                      onPressed: _onTapForgotPasswordButton,
                       child: Text('Forgot Password?'),
                     ),
                     RichText(
@@ -53,6 +54,8 @@ class _signInScreenState extends State<signInScreen> {
                           TextSpan(
                             style: TextStyle(color: Colors.green),
                             text: 'Sign Up',
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = _onTapSignUpButton,
                           ),
                         ],
                       ),
@@ -67,3 +70,7 @@ class _signInScreenState extends State<signInScreen> {
     );
   }
 }
+
+void _onTapSignInButton() {}
+void _onTapForgotPasswordButton() {}
+void _onTapSignUpButton() {}
