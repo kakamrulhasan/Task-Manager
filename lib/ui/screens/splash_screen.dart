@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 class splashScreen extends StatefulWidget {
   const splashScreen({super.key});
 
@@ -10,6 +10,10 @@ class splashScreen extends StatefulWidget {
 class _splashScreenState extends State<splashScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: SvgPicture.asset('assets/images/logo.svg',height: 60,width: 60,),
+      ),
+    );
   }
 }
