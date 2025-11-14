@@ -58,7 +58,7 @@ class _myAppState extends State<myApp> {
       
 
       },
-      initialRoute: '/',
+      initialRoute: splashScreen.name,
     );
   }
 }
