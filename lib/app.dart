@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_11/ui/screens/sign_in_screen.dart';
+import 'package:flutter_application_11/ui/screens/sign_up_screen.dart';
 import 'package:flutter_application_11/ui/screens/splash_screen.dart';
 
 class myApp extends StatefulWidget {
@@ -49,7 +51,14 @@ class _myAppState extends State<myApp> {
         ) ,
       ),
 
-      home: splashScreen(),
+      routes:<String,WidgetBuilder> {
+        splashScreen.name:(_)=>splashScreen(),
+        signInScreen.name:(_) => signInScreen(),
+        signUpScreen.name:(_)=>signUpScreen(),
+      
+
+      },
+      initialRoute: '/',
     );
   }
 }

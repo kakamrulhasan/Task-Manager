@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class splashScreen extends StatefulWidget {
   const splashScreen({super.key});
-
+  static const String name = '/';
   @override
   State<splashScreen> createState() => _splashScreenState();
 }
@@ -18,13 +18,9 @@ class _splashScreenState extends State<splashScreen> {
     _moveToNextScreen();
   }
 
-
   Future<void> _moveToNextScreen() async {
     await Future.delayed(Duration(seconds: 3));
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (context) => signInScreen()),
-    );
+    Navigator.pushReplacementNamed(context, signInScreen.name);
   }
 
   @override
