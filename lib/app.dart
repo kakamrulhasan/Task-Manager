@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_11/ui/screens/forgot_password_email_screen.dart';
 import 'package:flutter_application_11/ui/screens/forgot_password_verify_otp_screen.dart';
+import 'package:flutter_application_11/ui/screens/reset_password_screen.dart';
 import 'package:flutter_application_11/ui/screens/sign_in_screen.dart';
 import 'package:flutter_application_11/ui/screens/sign_up_screen.dart';
 import 'package:flutter_application_11/ui/screens/splash_screen.dart';
@@ -53,7 +54,11 @@ class _myAppState extends State<myApp> {
         ),
         textTheme: TextTheme(
           titleLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-          labelMedium: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: Colors.grey),
+          labelMedium: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+            color: Colors.grey,
+          ),
         ),
       ),
 
@@ -61,8 +66,10 @@ class _myAppState extends State<myApp> {
         splashScreen.name: (_) => splashScreen(),
         signInScreen.name: (_) => signInScreen(),
         signUpScreen.name: (_) => signUpScreen(),
-        ForgotPasswordEmailScreen.name:(_)=>ForgotPasswordEmailScreen(),
-        ForgotPasswordVerifyOtpScreen.name:(_)=>ForgotPasswordVerifyOtpScreen(),
+        ForgotPasswordEmailScreen.name: (_) => ForgotPasswordEmailScreen(),
+        ForgotPasswordVerifyOtpScreen.name: (_) =>
+            ForgotPasswordVerifyOtpScreen(),
+        resetPasswordScreen.name: (_) => resetPasswordScreen(),
       },
       initialRoute: splashScreen.name,
     );
