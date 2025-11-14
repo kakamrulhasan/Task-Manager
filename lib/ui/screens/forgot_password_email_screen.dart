@@ -2,15 +2,16 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_11/widgets/screen_background.dart';
 
-class signUpScreen extends StatefulWidget {
-  const signUpScreen({super.key});
+class ForgotPasswordEmailScreen extends StatefulWidget {
+  const ForgotPasswordEmailScreen({super.key});
 
-  static const String name = '/sign-up';
+  static const String name = '/forgot-password-email';
   @override
-  State<signUpScreen> createState() => _signUpScreenState();
+  State<ForgotPasswordEmailScreen> createState() =>
+      _ForgotPasswordEmailScreenState();
 }
 
-class _signUpScreenState extends State<signUpScreen> {
+class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,37 +24,32 @@ class _signUpScreenState extends State<signUpScreen> {
             children: [
               const SizedBox(height: 60),
               Text(
-                'Join With Us',
+                'Your Email Address',
                 style: Theme.of(context).textTheme.titleLarge,
+              ),
+              Text(
+                'A 6 digits verification OTP will be sent to your email address',
+                style: Theme.of(context).textTheme.labelMedium,
               ),
               const SizedBox(height: 8),
               TextFormField(decoration: InputDecoration(hintText: 'Email')),
-              TextFormField(
-                decoration: InputDecoration(hintText: 'First Name'),
-              ),
-              TextFormField(decoration: InputDecoration(hintText: 'Last Name')),
-              TextFormField(decoration: InputDecoration(hintText: 'Mobile')),
-              TextFormField(decoration: InputDecoration(hintText: 'Password')),
               const SizedBox(height: 8),
               FilledButton(
-                onPressed: _onTapSignUpButton,
+                onPressed: _onTapSubmitButton,
                 child: Icon(Icons.arrow_circle_right_outlined),
               ),
               const SizedBox(height: 24),
               Center(
                 child: Column(
                   children: [
-                    TextButton(
-                      onPressed: _onTapForgotPasswordButton,
-                      child: Text('Forgot Password?'),
-                    ),
+                    
                     RichText(
                       text: TextSpan(
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
                         ),
-                        text: "Already have an account ?  ",
+                        text: "Have an account ?  ",
                         children: [
                           TextSpan(
                             style: TextStyle(color: Colors.green),
@@ -74,9 +70,11 @@ class _signUpScreenState extends State<signUpScreen> {
     );
   }
 
-  void _onTapSignUpButton() {}
-  void _onTapForgotPasswordButton() {}
+
   void _onTapSignInButton() {
     Navigator.pop(context);
   }
+}
+
+void _onTapSubmitButton() {
 }
