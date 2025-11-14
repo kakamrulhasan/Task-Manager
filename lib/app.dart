@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_11/ui/screens/forgot_password_email_screen.dart';
+import 'package:flutter_application_11/ui/screens/forgot_password_verify_otp_screen.dart';
 import 'package:flutter_application_11/ui/screens/sign_in_screen.dart';
 import 'package:flutter_application_11/ui/screens/sign_up_screen.dart';
 import 'package:flutter_application_11/ui/screens/splash_screen.dart';
@@ -61,6 +62,7 @@ class _myAppState extends State<myApp> {
         signInScreen.name: (_) => signInScreen(),
         signUpScreen.name: (_) => signUpScreen(),
         ForgotPasswordEmailScreen.name:(_)=>ForgotPasswordEmailScreen(),
+        ForgotPasswordVerifyOtpScreen.name:(_)=>ForgotPasswordVerifyOtpScreen(),
       },
       initialRoute: splashScreen.name,
     );
