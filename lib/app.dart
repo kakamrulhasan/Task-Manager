@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_11/ui/screens/forgot_password_email_screen.dart';
 import 'package:flutter_application_11/ui/screens/forgot_password_verify_otp_screen.dart';
+import 'package:flutter_application_11/ui/screens/main_bottom_nav_screen.dart';
 import 'package:flutter_application_11/ui/screens/reset_password_screen.dart';
 import 'package:flutter_application_11/ui/screens/sign_in_screen.dart';
 import 'package:flutter_application_11/ui/screens/sign_up_screen.dart';
@@ -70,6 +71,8 @@ class _myAppState extends State<myApp> {
         ForgotPasswordVerifyOtpScreen.name: (_) =>
             ForgotPasswordVerifyOtpScreen(),
         resetPasswordScreen.name: (_) => resetPasswordScreen(),
+        MainBottomNavHolderScreen.name:(_)=>MainBottomNavHolderScreen(),
+        
       },
       initialRoute: splashScreen.name,
     );
