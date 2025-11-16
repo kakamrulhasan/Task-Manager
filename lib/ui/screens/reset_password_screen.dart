@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_11/ui/screens/forgot_password_verify_otp_screen.dart';
 import 'package:flutter_application_11/ui/screens/sign_in_screen.dart';
 import 'package:flutter_application_11/widgets/screen_background.dart';
 

@@ -61,6 +61,7 @@ class _myAppState extends State<myApp> {
             color: Colors.grey,
           ),
         ),
+        scaffoldBackgroundColor: Colors.green.shade50
       ),
 
       routes: <String, WidgetBuilder>{
