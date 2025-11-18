@@ -21,7 +21,7 @@ class _ForgotPasswordVerifyOtpScreenState
     return Scaffold(
       body: ScreenBackground(
         child: Padding(
-          padding: const EdgeInsets.all(24.0),
+          padding: const EdgeInsets.all(23.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: 8,
