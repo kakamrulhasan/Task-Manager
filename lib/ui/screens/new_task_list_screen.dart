@@ -17,33 +17,59 @@ class _NewTaskListScreenState extends State<NewTaskListScreen> {
           const SizedBox(),
           _buildTaskSummaryListView(),
           Expanded(
-            child: ListView.builder(
+            child: ListView.separated(
+              itemCount: 10,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text('Title of task'),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Description of the task',
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      Text('Date: 12 June 2021'),
-                      Row(
-                        children: [
-                          Chip(
-                            label: Text('New',style: TextStyle(color: Colors.white),),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadiusGeometry.circular(100),
+                return Container(
+                  margin: EdgeInsets.symmetric(horizontal: 8),
+                  child: ListTile(
+                    tileColor: Colors.white,
+                    title: Text('Title of task'),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Description of the task',
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                        Text('Date: 12 June 2021'),
+                        Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 4,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.green,
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Text(
+                                'New',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
                             ),
-                            backgroundColor: Colors.green,
-                            labelPadding: EdgeInsets.symmetric(horizontal: 16,),
-                          ),
-                        ],
-                      ),
-                    ],
+                            Spacer(),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(Icons.delete, color: Colors.grey),
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(Icons.edit, color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 );
+              },
+              separatorBuilder: (context, index) {
+                return SizedBox(height: 8);
               },
             ),
           ),
