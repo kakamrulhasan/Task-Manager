@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_11/ui/screens/cancel_task_list_screen.dart';
+import 'package:flutter_application_11/ui/screens/complete_task_list_screen.dart';
 import 'package:flutter_application_11/ui/screens/new_task_list_screen.dart';
 import 'package:flutter_application_11/ui/screens/progress_task_list_screen.dart';
 import 'package:flutter_application_11/widgets/tm_app_bar.dart';
@@ -16,8 +18,8 @@ class _MainBottomNavHolderScreenState extends State<MainBottomNavHolderScreen> {
   final List<Widget> _screens = [
     NewTaskListScreen(),
     ProgressTaskListScreen(),
-    NewTaskListScreen(),
-    NewTaskListScreen(),
+    CancelTaskListScreen(),
+    CompleteTaskListScreen(),
   ];
   @override
   Widget build(BuildContext context) {

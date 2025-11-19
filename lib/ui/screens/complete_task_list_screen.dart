@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_11/widgets/task_card.dart';
 
-class ProgressTaskListScreen extends StatefulWidget {
-  const ProgressTaskListScreen({super.key});
+class CompleteTaskListScreen extends StatefulWidget {
+  const CompleteTaskListScreen({super.key});
 
   @override
-  State<ProgressTaskListScreen> createState() => _ProgressTaskListScreenState();
+  State<CompleteTaskListScreen> createState() => _CompleteTaskListScreenState();
 }
 
-class _ProgressTaskListScreenState extends State<ProgressTaskListScreen> {
+class _CompleteTaskListScreenState extends State<CompleteTaskListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
