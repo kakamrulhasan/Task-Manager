@@ -7,6 +7,7 @@ import 'package:flutter_application_11/ui/screens/reset_password_screen.dart';
 import 'package:flutter_application_11/ui/screens/sign_in_screen.dart';
 import 'package:flutter_application_11/ui/screens/sign_up_screen.dart';
 import 'package:flutter_application_11/ui/screens/splash_screen.dart';
+import 'package:flutter_application_11/ui/screens/update_profile_screen.dart';
 
 class myApp extends StatefulWidget {
   const myApp({super.key});
@@ -77,6 +78,7 @@ class _myAppState extends State<myApp> {
         resetPasswordScreen.name: (_) => resetPasswordScreen(),
         MainBottomNavHolderScreen.name: (_) => MainBottomNavHolderScreen(),
         AddNewTaskScreen.name: (_) => AddNewTaskScreen(),
+        upDateProfileScreen.name:(_) =>upDateProfileScreen(),
       },
       
       initialRoute: splashScreen.name,
