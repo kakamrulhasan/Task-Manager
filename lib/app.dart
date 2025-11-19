@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_11/ui/screens/add_new_task_list_screen.dart';
 import 'package:flutter_application_11/ui/screens/forgot_password_email_screen.dart';
 import 'package:flutter_application_11/ui/screens/forgot_password_verify_otp_screen.dart';
 import 'package:flutter_application_11/ui/screens/main_bottom_nav_screen.dart';
@@ -18,7 +19,9 @@ class _myAppState extends State<myApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       theme: ThemeData(
+      
         colorSchemeSeed: Colors.green,
         inputDecorationTheme: InputDecorationTheme(
           fillColor: Colors.white,
@@ -61,7 +64,7 @@ class _myAppState extends State<myApp> {
             color: Colors.grey,
           ),
         ),
-        scaffoldBackgroundColor: Colors.green.shade50
+        scaffoldBackgroundColor: Colors.green.shade50,
       ),
 
       routes: <String, WidgetBuilder>{
@@ -72,9 +75,10 @@ class _myAppState extends State<myApp> {
         ForgotPasswordVerifyOtpScreen.name: (_) =>
             ForgotPasswordVerifyOtpScreen(),
         resetPasswordScreen.name: (_) => resetPasswordScreen(),
-        MainBottomNavHolderScreen.name:(_)=>MainBottomNavHolderScreen(),
-        
+        MainBottomNavHolderScreen.name: (_) => MainBottomNavHolderScreen(),
+        AddNewTaskScreen.name: (_) => AddNewTaskScreen(),
       },
+      
       initialRoute: splashScreen.name,
     );
   }

@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import 'package:flutter_application_11/ui/screens/add_new_task_list_screen.dart';
 import 'package:flutter_application_11/widgets/task_card.dart';
 
 class NewTaskListScreen extends StatefulWidget {
@@ -13,7 +15,6 @@ class _NewTaskListScreenState extends State<NewTaskListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        
         child: Column(
           spacing: 8,
           children: [
@@ -22,7 +23,7 @@ class _NewTaskListScreenState extends State<NewTaskListScreen> {
             ListView.separated(
               itemCount: 10,
               shrinkWrap: true,
-              primary:  false,
+              primary: false,
               physics: NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
                 return taskCard();
@@ -34,10 +35,16 @@ class _NewTaskListScreenState extends State<NewTaskListScreen> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: (){
+      floatingActionButton: FloatingActionButton(
+        onPressed: _onTapAddNewTaskButton,
 
-      },child: Icon(Icons.add),),
+        child: Icon(Icons.add),
+      ),
     );
+  }
+
+  void _onTapAddNewTaskButton() {
+    Navigator.pushNamed(context, AddNewTaskScreen.name);
   }
 
   Widget _buildTaskSummaryListView() {
@@ -71,4 +78,3 @@ class _NewTaskListScreenState extends State<NewTaskListScreen> {
     );
   }
 }
-

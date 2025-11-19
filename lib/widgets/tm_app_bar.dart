@@ -11,6 +11,7 @@ class TMAppBar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     final texttheme = Theme.of(context).textTheme;
     return AppBar(
+      automaticallyImplyLeading: false,
       backgroundColor: Colors.green,
       title: Row(
         spacing: 16,
