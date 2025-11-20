@@ -19,7 +19,7 @@ class _splashScreenState extends State<splashScreen> {
   }
 
   Future<void> _moveToNextScreen() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(seconds: 7));
     Navigator.pushReplacementNamed(context, signInScreen.name);
   }
 
