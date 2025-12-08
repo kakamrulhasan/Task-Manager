@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_application_11/widgets/photo_picker.dart';
 import 'package:flutter_application_11/widgets/screen_background.dart';
 import 'package:flutter_application_11/widgets/tm_app_bar.dart';
 
@@ -15,7 +15,7 @@ class _upDateProfileScreenState extends State<upDateProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TMAppBar(),
+      appBar: TMAppBar(fromUpdateProfile: true),
       body: ScreenBackground(
         child: Padding(
           padding: const EdgeInsets.all(24.0),
@@ -29,6 +29,7 @@ class _upDateProfileScreenState extends State<upDateProfileScreen> {
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               const SizedBox(height: 8),
+              GestureDetector(onTap: (){},child: PhotoPicker()),
               TextFormField(decoration: InputDecoration(hintText: 'Email')),
               TextFormField(
                 decoration: InputDecoration(hintText: 'First Name'),
@@ -38,20 +39,17 @@ class _upDateProfileScreenState extends State<upDateProfileScreen> {
               TextFormField(decoration: InputDecoration(hintText: 'Password')),
               const SizedBox(height: 8),
               FilledButton(
-                onPressed: _onTapSignUpButton,
+                onPressed: _onTapUpdateButton,
                 child: Icon(Icons.arrow_circle_right_outlined),
               ),
-              
-             ],
+            ],
           ),
         ),
       ),
     );
   }
 
-  void _onTapSignUpButton() {}
-  void _onTapForgotPasswordButton() {}
-  void _onTapSignInButton() {
-    Navigator.pop(context);
-  }
+  void _onTapUpdateButton() {}
+  
 }
+
